@@ -13,6 +13,7 @@ import javax.persistence.*;
 @Data
 @SuperBuilder
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@Table(name="product")
 public abstract class Product {
     @Id
     @GeneratedValue

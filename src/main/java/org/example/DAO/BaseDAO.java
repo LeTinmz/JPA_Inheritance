@@ -15,8 +15,8 @@ import java.util.Optional;
 
 public abstract class BaseDAO<T> {
 
-        protected final EntityManager em;
-        protected final Class<T> tClass;
+        protected  EntityManager em;
+        protected  Class<T> tClass;
 
         public BaseDAO(Class<T> tClass) {
             this.em = DatabaseManager.getEntityManager();
@@ -56,11 +56,9 @@ public abstract class BaseDAO<T> {
         }
 
 
-
-
-
-
     public T update(T entity) {
         return em.merge(entity);
     }
+
+
 }
