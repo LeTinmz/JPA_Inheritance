@@ -60,5 +60,6 @@ public abstract class BaseDAO<T> {
         return em.merge(entity);
     }
 
+        public abstract List<T> findAll();
 
 }
